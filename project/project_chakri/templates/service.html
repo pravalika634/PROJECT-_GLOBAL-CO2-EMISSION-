@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chakri</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+          /* border margin */
+          .text-container {
+        border: 2px solid white; /* Border style */
+        padding: 7px; /* Space inside the border */
+        margin: 7px; /* Space outside the border */
+    }
+        /* Heading styles */
+        h1 {
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #454679 !important;
+            border-radius: 0;
+            padding: 5px 0;
+            margin: 0;
+        }
+
+        .navbar-brand img {
+            width: 30%;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffd700 !important;
+        }
+
+        /* Paragraph styles */
+        p {
+            font-family: "Times New Roman", Times, serif;
+            color: #666;
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #3a4664; /* Cobalt color */
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer i {
+            font-size: 30px;
+            margin: 0 10px;
+        }
+
+        /* Image hover effect */
+        img {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            opacity: 0.8;
+            transform: scale(1.05); /* Scale up the image slightly */
+        }
+
+        /* Card styles */
+        .card {
+            color: #fff;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: none;
+            transition: transform 0.3s ease-in-out;
+            padding: 20px;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Zoom out effect */
+        }
+
+        .card-title {
+            color: #fff;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        /* Styles for card colors */
+.card-leader {
+    background-color: #C3E2C2; /* Red */
+}
+
+.card-member1 {
+    background-color: #EAECCC; /* Blue */
+}
+
+.card-member2 {
+    background-color: #DBCC95; /* Green */
+}
+
+.card-member3 {
+    background-color: #CD8D7A; /* Orange */
+}
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='chakri.png') }}" alt="Example Image">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team-info">Team Information</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="text-container">
+<h1>A GLOBAL CO2 EMISSION ANALYSIS</h1>
+<div class="text-center">
+    <img src="{{ url_for('static', filename='first.jpg') }}" alt="First Image" style="width: 60%;">
+
+    <p>
+        In our data analytics project, "Unearthing The Environmental Impact Of Human Activity: A Global CO2 Emission," we obtained comprehensive data spanning the years 1947 to 2022 for all countries.<br>This extensive dataset provided us with a historical perspective on the evolution of CO2 emissions, allowing us to track changes over nearly eight decades.<br>By analyzing this wealth of data, we were able to uncover trends, identify key drivers, and assess the impact of various factors on global carbon output.<br>From the post-war industrialization era to the modern-day challenges of climate change, our dataset enabled us to capture the full spectrum of human activity's influence on the environment.<br>This robust historical data served as the foundation for our dashboards, stories, and visualizations, empowering stakeholders with actionable insights to address the pressing issue of climate change.<br>As we conclude our project, we recognize the significance of this comprehensive dataset in advancing our understanding of the environmental consequences of human activity and the urgent need for sustainable solutions.
+
+    </p>
+</div>
+
+<h2>DASHBOARD</h2>
+<div class="text-center">
+<img src="{{ url_for('static', filename='dashboard.png') }}" alt="First Image" style="width: 70%;">
+</div>
+<p>
+     
+    Our project has meticulously crafted visualizations using Tableau Desktop to shed light on critical aspects of global CO2 emissions.<br>Through pie charts, we highlight the top 5 countries with the highest flaring CO2 emissions and gas CO2 emissions, providing a clear representation of the geographic distribution of these emissions sources.<br>These visualizations offer valuable insights into the major contributors to specific types of CO2 emissions, informing discussions on mitigation strategies and international cooperation.<br>Additionally, our line chart tracks the percentage of global CO2 emissions from 1947 to 2022, offering a comprehensive view of historical trends and milestones.<br>This visualization captures the evolution of CO2 emissions over time, from post-war industrialization to modern-day sustainability efforts, serving as a powerful tool for policymakers, researchers, and the public alike to understand the trajectory of human impact on the environment.</p>
+<ul>
+    <li>"The pie charts succinctly present the top 5 countries driving flaring and gas CO2 emissions, offering stakeholders a clear understanding of the regional disparities in carbon output."</li>
+    <li>"Our line chart spans nearly eight decades, revealing how global CO2 emissions have fluctuated over time, providing crucial context for understanding the urgency of contemporary climate action."</li>
+    <li>"Through intuitive visualizations, our project aims to foster dialogue and collaboration among nations, industries, and communities to address the pressing challenge of climate change."</li>
+</ul>
+<h2>STORY</h2>
+<div class="text-center">
+    <img src="{{ url_for('static', filename='story1.png') }}" alt="Second Image" style="width: 20%;">
+    <img src="{{ url_for('static', filename='story2.png') }}" alt="Second Image" style="width: 20%;">
+    <img src="{{ url_for('static', filename='story3.png') }}" alt="Second Image" style="width: 20%;">
+    <img src="{{ url_for('static', filename='story4.png') }}" alt="Second Image" style="width: 20%;">
+
+</div>
+
+<p>
+  
+    As we embark on our journey to unearth the environmental impact of human activity, our data analytics project unveils a series of compelling visualizations that offer profound insights into the complex dynamics of CO2 emissions worldwide.<br>Through an area chart illustrating the CO2 growth percentage in the top 10 countries, we witness the staggering rise in carbon emissions over time, showcasing the evolving landscape of global carbon footprints.<br>Simultaneously, a map chart highlighting the top 10 populated countries vividly portrays the geographical distribution of human activity and its corresponding impact on CO2 emissions, underscoring the interconnectedness between population density and environmental concerns.<br>Delving deeper into regional trends, an area chart specifically focusing on CO2 emissions in India from 1974 to 2022 unveils the nation's trajectory in carbon output, reflecting its evolving economic landscape and policy interventions.<br>Furthermore, a bubble chart depicting trade CO2 shares from 1974 to 2022 provides a nuanced understanding of the global trade dynamics and their implications for carbon emissions, shedding light on the intricate web of international commerce and environmental responsibility.</p>
+<ul>
+    <li>"The area chart showcasing CO2 growth percentage in the top 10 countries serves as a stark reminder of the urgent need for concerted global action to address climate change."</li>
+    <li>"The map chart visually captures the disproportionate distribution of population and CO2 emissions across the globe, highlighting the responsibility of densely populated regions in mitigating environmental impact."</li>
+    <li>"Through the area chart tracking CO2 emissions in India, we observe the nation's journey towards sustainable development, offering valuable insights for policymakers and stakeholders navigating India's environmental challenges."</li>
+    <li>"The bubble chart on trade CO2 shares offers a nuanced perspective on the intricate interplay between economic globalization and environmental sustainability, urging stakeholders to rethink traditional paradigms of economic growth."</li>
+    
+</ul>
+
+<h2>Decades of Global CO2 Emission Trends: Analyzing Growth Percentages from 1974 to 2020</h2>
+<div class="text-center">
+    <img src="{{ url_for('static', filename='line.png') }}" alt="Third Image" style="width: 50%;">
+</div>
+
+<p>Our data analytics project unveils a compelling visualization titled 'Decades of Global CO2 Emission Trends: Analyzing Growth Percentages from 1974 to 2020' in the form of a line chart. This visualization offers a comprehensive overview of the evolution of CO2 emissions spanning nearly five decades.<br>Through meticulously gathered data points, viewers can discern the fluctuating growth percentages of CO2 emissions across different decades, providing valuable insights into the changing patterns of human impact on the environment.<br>From the industrial boom of the 1970s to the heightened awareness of climate change in the 21st century, each decade's data points tell a story of societal development and its corresponding carbon footprint.<br>By analyzing this visualization, researchers and policymakers can identify trends, milestones, and potential drivers of CO2 emissions, guiding efforts towards more targeted and effective climate mitigation strategies.<br>Ultimately, this visualization serves as a valuable tool for understanding the historical context of global CO2 emissions, highlighting both progress made and challenges ahead in the pursuit of a more sustainable future..</p>
+
+<h2>Top 5 Countries with Highest Flaring CO2 Emissions: Pie Chart Analysis</h2>
+<div class="text-center">
+    <img src="{{ url_for('static', filename='pie.png') }}" alt="Fourth Image" style="width: 50%;">
+</div>
+
+<p>Our project presents a revealing pie chart analysis titled 'Top 5 Countries with Highest Flaring CO2 Emissions.'<br>This visualization succinctly illustrates the distribution of CO2 emissions from flaring activities across the globe.<br>Through vibrant and easily interpretable segments, viewers can discern the disproportionate contribution of the top 5 countries to global flaring CO2 emissions.<br>Each slice of the pie represents a country, with its size proportional to its share of the total emissions.<br>This visualization serves as a stark reminder of the significant environmental impact resulting from flaring activities, highlighting the urgent need for targeted interventions and policy measures to mitigate these emissions.<br>By providing a clear snapshot of the major contributors to flaring CO2 emissions, this pie chart analysis informs discussions and initiatives aimed at addressing this critical aspect of climate change mitigation.</p>
+
+    <h2>These countries have experienced significant growth in CO2 emissions percentage-wise.</h2>
+    <div class="text-center">
+    <img src="{{ url_for('static', filename='area.png') }}" alt="Fourth Image" style="width: 50%;">
+    </div>
+    <p>
+
+Our data analytics project presents an illuminating area chart that delves into the nuanced dynamics of CO2 emissions growth percentage-wise in the top countries. <br>
+This visualization offers a comprehensive overview of the historical progression of carbon emissions, capturing the trajectory of industrialization, economic development, and energy consumption patterns. <br>
+Through gradual rises and fluctuations, the area chart vividly portrays the significant growth experienced by these nations over time. <br>
+From the dawn of the industrial revolution to the present era of technological advancement, each data point on the chart reflects the evolving landscape of human impact on the environment. <br>
+By visually representing the percentage-wise growth of CO2 emissions, this chart underscores the urgent need for targeted interventions and collaborative efforts to address climate change challenges. <br>
+It serves as a valuable resource for policymakers, researchers, and stakeholders alike, offering insights to inform strategies for sustainable development and environmental stewardship in the face of the global climate crisis.</p>
+    <h2>Evolution of Trade-Related CO2 Emissions: 1990-2020</h2>
+    <div class="text-center">
+    <img src="{{ url_for('static', filename='bubble.png') }}" alt="Fourth Image" style="width: 50%;">
+    </div>
+    <p>
+        The data provided showcases the evolution of trade-related CO2 emissions over several decades. Beginning in 1990, there's a notable increase in CO2 emissions attributable to trade, reflecting the growing interconnectedness of global economies. This rise continues until the mid-2000s, peaking in 2008, likely influenced by increased globalization and industrialization.<br>
+        
+        However, following the global financial crisis in 2008, there appears to be a temporary downturn in trade-related CO2 emissions, indicative of the economic slowdown and subsequent reduction in global trade activity. Yet, as economies recovered, emissions started climbing again, reaching significant levels by 2013.<br>
+        
+        From 2013 onwards, there seems to be a fluctuating pattern, perhaps reflecting changes in trade policies, economic growth rates, and environmental regulations across various regions. Nonetheless, the general trend suggests that trade-related CO2 emissions remain a significant contributor to global carbon emissions, underscoring the importance of sustainable trade practices and environmental policies in mitigating climate change.<br></p> 
+    </div>
+
+    <h2 id="team-info">Team Information</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card team-info card-leader"> <!-- Added custom class "card-leader" -->
+                    <div class="card-body">
+                        <h5 class="card-title">Team Leader</h5>
+                        <p class="card-text">Name: Sontyana Chakradhar</p>
+                        <p class="card-text">Position: Team Leader</p>
+                        <p class="card-text">Email: rockerchakri@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card team-info card-member1"> <!-- Added custom class "card-member1" -->
+                    <div class="card-body">
+                        <h5 class="card-title">Team Member 1</h5>
+                        <p class="card-text">Name:P Gayathri</p>
+                        <p class="card-text">Position: Member</p>
+                        <p class="card-text">Email: gayathripolaki95@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card team-info card-member2"> <!-- Added custom class "card-member2" -->
+                    <div class="card-body">
+                        <h5 class="card-title">Team Member 2</h5>
+                        <p class="card-text">Name:P sai</p>
+                        <p class="card-text">Position: Member</p>
+                        <p class="card-text">Email: <br>      tsai75400@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card team-info card-member3"> <!-- Added custom class "card-member3" -->
+                    <div class="card-body">
+                        <h5 class="card-title">Team Member 3</h5>
+                        <p class="card-text">Name: Shaik Saleem</p>
+                        <p class="card-text">Position: Member</p>
+                        <p class="card-text">Email: Saleemshaik0239@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <a href="https://www.instagram.com/drlankapalli_bullayya_college?igshid=ZTUxem50aG1kdXQ3"><i class="fab fa-instagram"></i> Follow us on Instagram</a>
+            <a href="mailto:sontyanachakradhar@gmail.com"><i class="far fa-envelope"></i> Email us</a>
+            <a href="https://github.com/CHAKRIiii/721128805602"><i class="fab fa-github"></i> Visit us on GitHub</a>
+        </div>
+    </footer>
+    <script>
+        // JavaScript function to scroll to team information section when clicking on "Team Information" link
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.navbar-nav .nav-link[href="#team-info"]').addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelector('#team-info').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+    </body>
+    </html>
